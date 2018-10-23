@@ -151,7 +151,7 @@ public class MainGUI extends Application implements EventHandler<ActionEvent>{
 		DobField.setLayoutX(125);
 		DobField.setLayoutY(135);
 		
-		Text Year = new Text("Year: ");
+		Text Year = new Text("Year : ");
 		Year.setLayoutX(20);
 		Year.setLayoutY(205);
 		
