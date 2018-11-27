@@ -7,17 +7,12 @@ import javafx.scene.layout.Pane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
-
-
-
 public class AddWindow extends Stage{
 	
-	
-	public void start (Stage stage) throws Exception{
-
-		Stage stage = new Stage();
+		static public void start (Stage stage) throws Exception{
+		Stage stage1 = new Stage();
 	//fill the stage
-	stage.setTitle("Add A Student");
+	stage1.setTitle("Add A Student");
 	Text studentName = new Text("Student Name: ");
 	studentName.setLayoutX(20);
 	studentName.setLayoutY(30);
@@ -48,7 +43,7 @@ public class AddWindow extends Stage{
 	TextField YID = new TextField();
 	YID.setLayoutX(125);
 	YID.setLayoutY(185);
-	Button Ok = new Button("Ok");
+	Button Ok = new Button("Add");
 	Ok.setLayoutX(150);
 	Ok.setLayoutY(250);
 	Button Exit = new Button("Exit");
@@ -67,8 +62,8 @@ public class AddWindow extends Stage{
 								   DOB,DOBID,
 								   Year, YID, Ok, Exit);
 	Scene added = new Scene(Addwindow,350,300);
-	stage.setScene(added);
-	stage.show();
+	stage1.setScene(added);
+	stage1.show();
 	//if(addbtn.getText().equals("Clicked")) addbtn.setText("Add");
 	//else addbtn.setText("Clicked");
 
