@@ -11,25 +11,8 @@ import java.sql.*;
 
 public class MainGUI extends Application implements EventHandler<ActionEvent>{
 
-	//JDBC driver name and database URL
-	//static final String JDBC_DRIVER =;
-	//static final String DB_URL = ;
-
-	//Database Credentials
-	//static final String USER = "username";
-	//static final String PASS = "password";
-
-
-	//Holds launch
 	public static void main(String[] args) {
 		launch(args);	
-		//Connection conn = null;
-		//Statement stmt = null;
-		/* try{
-		 * 
-		 * Step 2: Register JDBC driver
-		 * Class.forName("");
-		 *  */
 	}
 	@Override
 	public void start(Stage stage) throws Exception {
