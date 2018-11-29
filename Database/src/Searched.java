@@ -7,7 +7,6 @@ import javafx.stage.Stage;
 
 public class Searched {
 	static public void start (Stage stage) throws Exception{
-		//This pane will print out everything associated with the student name and studentID that is searched
 	Stage stage2 = new Stage();
 	stage2.setTitle("Searched Student");
 	Button Exit = new Button("Exit");
