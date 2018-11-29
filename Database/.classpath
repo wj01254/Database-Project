@@ -12,5 +12,7 @@
 	<classpathentry kind="lib" path="src/ormlite-core-5.1.jar"/>
 	<classpathentry kind="lib" path="src/ormlite-jdbc-5.1.jar"/>
 	<classpathentry kind="lib" path="lib/mysql-connector-java-8.0.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wende/Desktop/Microsoft JDBC Driver 7.0 for SQL Server/sqljdbc_7.0/enu/mssql-jdbc-7.0.0.jre8.jar"/>
+	<classpathentry kind="lib" path="C:/Users/wende/Desktop/Microsoft JDBC Driver 7.0 for SQL Server/sqljdbc_7.0/enu/mssql-jdbc-7.0.0.jre10.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
