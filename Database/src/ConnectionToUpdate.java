@@ -13,8 +13,8 @@ public static void main (String[] args) throws ClassNotFoundException {
 
 		try (Connection con = DriverManager.getConnection(connectionurl); Statement stmt = con.createStatement();){
 			String update = "update Student " +
-					" " +
-					" values ()";//!!!!Fill this up with data!
+					"set StudentID = '900935386' " +
+					" where FirstName ='Wendell'";
 			stmt.executeUpdate(update);
 			System.out.println("Update Complete");
 			con.close();
