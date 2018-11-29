@@ -16,12 +16,10 @@ public class DBAccess {
 			String SQL = "select* from Student";
 			ResultSet rs = stmt.executeQuery(SQL);
 
-			while (rs.next()) {
-				System.out.println(rs.getInt("StudentID") + "\t " +rs.getString("FirstName") + "\t" + rs.getString("LastName") + "\t" + rs.getString("Year")
-				+ "\t" + rs.getString("School") + "\t" + rs.getDate("DOB") + "\t" + rs.getString("Address"));
-				
-				
-			}
+//			while (rs.next()) {
+//				System.out.println(rs.getInt("StudentID") + "\t " +rs.getString("FirstName") + "\t" + rs.getString("LastName") + "\t" + rs.getString("Year")
+//				+ "\t" + rs.getString("School") + "\t" + rs.getDate("DOB") + "\t" + rs.getString("Address"));				
+//			}
 			con.close();
 		}
 		catch(SQLException e) {
