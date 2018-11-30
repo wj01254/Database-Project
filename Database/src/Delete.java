@@ -29,7 +29,7 @@ public class Delete extends Stage{
 			@Override
 			public void handle(ActionEvent e) {
 			
-			DBAccess db = new DBAccess();
+			//DBAccess db = new DBAccess();
 			//db.Write(s);
 				System.out.println("Deleted");
 			}
