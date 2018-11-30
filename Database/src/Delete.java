@@ -25,6 +25,15 @@ public class Delete extends Stage{
 		ID.setLayoutX(125);
 		ID.setLayoutY(55);
 		Button Gone = new Button("Delete");
+		Gone.setOnAction(new EventHandler<ActionEvent> () {
+			@Override
+			public void handle(ActionEvent e) {
+			
+			DBAccess db = new DBAccess();
+			//db.Write(s);
+				System.out.println("Deleted");
+			}
+		});
 		Gone.setLayoutX(150);
 		Gone.setLayoutY(250);
 		Button Exit = new Button("Exit");
@@ -43,7 +52,5 @@ public class Delete extends Stage{
 		Scene added = new Scene(Deleted,350,300);
 		stage1.setScene(added);
 		stage1.show();
-		//if textfield != null then prompt enter a name or ID first
-		// if textfield == null then prompt "Are you sure?"
 	}
 }

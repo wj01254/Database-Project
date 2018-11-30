@@ -4,27 +4,45 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-
 public class DBAccess {
 
-	public static void main (String[] args) throws ClassNotFoundException {
-		
-		Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-		String connectionurl = "jdbc:sqlserver://localhost:1433;" + "database=master;user=jdbc;password=abc;";
+	String connectionurl = "jdbc:sqlserver://localhost:1433;" + "database=master;user=jdbc;password=abc;";
+	Connection con;
 
-		try (Connection con = DriverManager.getConnection(connectionurl); Statement stmt = con.createStatement();){
-			String SQL = "select* from Student";
-			ResultSet rs = stmt.executeQuery(SQL);
+	private ResultSet rs;
 
-//			while (rs.next()) {
-//				System.out.println(rs.getInt("StudentID") + "\t " +rs.getString("FirstName") + "\t" + rs.getString("LastName") + "\t" + rs.getString("Year")
-//				+ "\t" + rs.getString("School") + "\t" + rs.getDate("DOB") + "\t" + rs.getString("Address"));				
-//			
-			//}
-			con.close();
+	public DBAccess() {
+		this.Connect();
+	}
+
+	public int Connect() {
+		try {
+			con = DriverManager.getConnection(connectionurl);
+			Statement stmt = con.createStatement();
+		} catch (SQLException e) {
+			e.printStackTrace();
+			return 1;
 		}
-		catch(SQLException e) {
+		return 0;
+	}
+
+	public ResultSet Read(String s) {
+		try {
+			rs = con.createStatement().executeQuery(s);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return rs;
+	}
+	
+	public void Write(String s) {
+		try {
+			rs = con.createStatement().executeQuery(s);
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
+
 }
